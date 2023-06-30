@@ -3,7 +3,6 @@ import Card from "./Card";
 import { CardLists } from '../styled'
 
 function TodoLayout({ todo, deleteTodo, makeDone, isDone }) {
-  console.log(todo)
   return (
     <div>
    <CardLists>

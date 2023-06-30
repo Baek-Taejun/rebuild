@@ -1,10 +1,23 @@
 import { useState } from "react";
+import { useSelector, useDispatch } from "react-redux";
+import {
+  setTodo,
+  add_todo,
+  delete_todo,
+  update_todo,
+} from "../redux/modules/todoReduce";
+// import {
+//   add_todo,
+//   delete_todo,
+//   update_todo,
+//   selectTodoSlice,
+// } from "../redux/modules/todoSlice";
 
 export const useTodo = () => {
-  const [todo, setTodo] = useState([]);
   const [title, setTitle] = useState("");
   const [content, setContent] = useState("");
-
+  const todo = useSelector(setTodo);
+  const dispatch = useDispatch();
   const onChangeTitleHandle = (e) => {
     setTitle(e.target.value);
   };
@@ -19,24 +32,17 @@ export const useTodo = () => {
       content: content,
       isDone: false,
     };
-    setTodo([...todo, newTodo]);
+    dispatch(add_todo(newTodo));
     setTitle("");
     setContent("");
   };
 
   const deleteTodo = (id) => {
-    const updateDelete = todo.filter((item) => item.id !== id);
-    setTodo(updateDelete);
+    dispatch(delete_todo(id));
   };
 
   const makeDone = (id) => {
-    const updateDone = todo.map((item) => {
-      if (item.id === id) {
-        return { ...item, isDone: !item.isDone };
-      }
-      return item;
-    });
-    setTodo(updateDone);
+    dispatch(update_todo(id));
   };
 
   return {
@@ -44,7 +50,6 @@ export const useTodo = () => {
     title,
     content,
     setTitle,
-    setTodo,
     setContent,
     addTodo,
     deleteTodo,
