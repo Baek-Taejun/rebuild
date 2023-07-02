@@ -1,7 +1,15 @@
 import React from 'react';
 import { ContentBox } from '../styled'
+import {useTodo} from '../hooks/useTodo'
 
-const Content = ({ title, content, onChangeTitleHandle, onChangeContentHandle, addTodo }) => {
+const Content = () => {
+    const{   
+        title,
+        content,
+        addTodo,
+        onChangeTitleHandle,
+        onChangeContentHandle,
+      } = useTodo();
     return ( 
         <ContentBox title={title} content={content}>
             <span>제목:</span>
