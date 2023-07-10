@@ -1,17 +1,17 @@
 import { useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
-import {
-  setTodo,
-  add_todo,
-  delete_todo,
-  update_todo,
-} from "../redux/modules/todoReduce";
 // import {
+//   setTodo,
 //   add_todo,
 //   delete_todo,
 //   update_todo,
-//   selectTodoSlice,
-// } from "../redux/modules/todoSlice";
+// } from "../redux/modules/todoReduce";
+import {
+  add_todo,
+  delete_todo,
+  update_todo,
+  setTodo,
+} from "../redux/modules/todoSlice";
 
 export const useTodo = () => {
   const [title, setTitle] = useState("");
