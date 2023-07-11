@@ -42,6 +42,6 @@ const todoSlice = createSlice({
 });
 
 export default todoSlice.reducer; // todoSlice.reducer
-export const setTodo = (state) => state.todoSlice; //  useSelector 는 store(함수의 인자)를 전부 가져와요. >> (state) 함수의 매개변수 >> state(store).todoSlice 있는 값만 반환
+export const setTodo = (state) => state.todoSlice;
 export const { add_todo, delete_todo, update_todo } = todoSlice.actions; //  todoSlice.actions
  

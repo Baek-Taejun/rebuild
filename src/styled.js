@@ -25,10 +25,6 @@ const TitleInput = styled.div`
   font-size: 18px;
   margin-left: 20px;
   width: 300px;
-  div {
-    display: flex;
-    justify-content: space-between;
-  }
 `;
 
 const ContentBox = styled.div`
@@ -68,31 +64,4 @@ const ContentBox = styled.div`
   }
 `;
 
-const DetailBox = styled.div`
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  border: 1px solid gray;
-  background: white;
-  padding: 10px;
-  font-size: 20px;
-  width: 500px;
-  height: 300px;
-  div {
-    font-size: 15px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  button {
-    border: 1px solid #ccc;
-    border-radius: 10px;
-    padding: 10px 20px;
-    font-size: 15px;
-    margin-left: 20px;
-    cursor: pointer;
-  }
-`;
-
-export { CardButton, CardLists, TitleInput, ContentBox, DetailBox };
+export { CardButton, CardLists, TitleInput, ContentBox };
