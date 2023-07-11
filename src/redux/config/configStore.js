@@ -3,9 +3,10 @@
 
 // const rootReducers = combineReducers({
 //   // 모듈에서 만든 모든 리듀서 등록해줄꺼에요.
-// })
+//   todoReduce: todoReduce,
+// });
 
-// const store = legacy_createStore(rootReducers)
+// const store = legacy_createStore(rootReducers);
 
 // export default store
 

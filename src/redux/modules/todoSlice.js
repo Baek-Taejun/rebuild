@@ -44,3 +44,4 @@ const todoSlice = createSlice({
 export default todoSlice.reducer; // todoSlice.reducer
 export const setTodo = (state) => state.todoSlice;
 export const { add_todo, delete_todo, update_todo } = todoSlice.actions; //  todoSlice.actions
+ 
