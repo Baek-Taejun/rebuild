@@ -1,8 +1,15 @@
 import React from 'react';
 import Card from "./Card";
 import { CardLists } from '../styled'
+import { useTodo } from '../hooks/useTodo'
 
-function TodoLayout({ todo, deleteTodo, makeDone, isDone }) {
+function TodoLayout({ isDone }) {
+  const {
+    todo,
+    deleteTodo,
+    makeDone,
+  } = useTodo()
+  
   return (
     <div>
    <CardLists>
